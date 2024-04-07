@@ -1,0 +1,17 @@
+.dots {
+  margin-top: 5rem;
+  display: flex;
+  gap: 12px;
+
+  & .dot {
+    height: 10px;
+    width: 18px;
+    background-color: $color-white;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+  }
+  & .dot--fill {
+    background-color: $color-primary;
+    color: "red";
+  }
+}

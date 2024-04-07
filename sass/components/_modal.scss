@@ -1,0 +1,151 @@
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden,
+.hidden-delete,
+.hidden-delete-confirm,
+.hidden-add-new-bike,
+.hidden-book-new-job,
+.hidden-bike-added-confirm,
+.hidden-new-job,
+.hidden-finish-new-job,
+.hidden-invoice,
+.hidden-invoice-confirm,
+.hidden-notification,
+.hidden-job-processing,
+.hidden-job-done,
+.hidden-customer-delete,
+.hidden-customer-delete-confirm,
+.hidden-appointment-delete,
+.hidden-appointment-delete-confirm,
+.hidden-appointment-assign {
+  display: none;
+}
+
+.modal,
+.modal-delete,
+.modal-delete-confirm,
+.modal-add-new-bike,
+.modal-book-new-job,
+.modal-bike-added-confirm,
+.modal-new-job,
+.modal-finish-new-job,
+.modal-invoice,
+.modal-invoice-confirm,
+.modal-job-processing,
+.modal-customer-delete,
+.modal-customer-delete-confirm,
+.modal-appointment-delete,
+.modal-appointment-delete-confirm,
+.modal-appointment-assign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+
+  background-color: $color-white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: justify;
+}
+
+.modal-notification {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  transform: translate(-50%, 20%);
+  background-color: $color-white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: justify;
+  padding: 0.5rem;
+}
+
+.modal-job-done {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: $color-white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  text-align: justify;
+}
+
+.modal-add-new-bike,
+.modal-new-job,
+.modal-invoice,
+.modal-job-processing,
+.modal-job-done {
+  padding: 2rem;
+}
+
+.overlay,
+.overlay-delete,
+.overlay-delete-confirm,
+.overlay-add-new-bike,
+.overlay-book-new-job,
+.overlay-bike-added-confirm,
+.overlay-new-job,
+.overlay-finish-new-job,
+.overlay-invoice,
+.overlay-invoice-confirm,
+.overlay-notification,
+.overlay-job-processing,
+.overlay-job-done,
+.overlay-customer-delete,
+.overlay-customer-delete-confirm,
+.overlay-appointment-delete,
+.overlay-appointment-delete-confirm,
+.overlay-appointment-assign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  opacity: 0.8;
+}
+
+/* -------------------------- */
+/* Inside modal properties */
+.top-modal {
+  border-bottom: 2px solid $color-gray;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+}

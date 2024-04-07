@@ -1,0 +1,271 @@
+.authenticate {
+  margin: 0 auto;
+  margin-top: 10rem;
+  max-width: 80.5rem;
+  width: 100%;
+  align-items: center;
+  padding: 2rem;
+
+  &__image {
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 10rem;
+      height: 6rem;
+      margin-bottom: 1.5rem;
+
+      background-image: url(/img/logo-header.png);
+      background-size: cover;
+
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        //New Browsers masks.
+        background-color: $color-primary;
+        -webkit-mask-image: url(/img/logo-header.png);
+        -webkit-mask-size: cover;
+
+        mask-image: url(/img/logo-header.png);
+        mask-size: cover;
+        background-image: none;
+      }
+    }
+  }
+
+  &__details {
+    flex: 1;
+    background-color: $color-white;
+    height: 100%;
+    @include respond(tabport) {
+      align-items: center;
+    }
+
+    &--text {
+      margin-top: 3.5rem;
+      max-width: 28rem;
+      font-size: 1rem;
+      font-style: inherit;
+      font-weight: 600;
+      text-align: center;
+      & span {
+        color: $color-primary;
+        cursor: pointer;
+        & a {
+          font-size: inherit;
+        }
+      }
+    }
+
+    & .p {
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 28rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &--remember {
+      color: $color-primary;
+      font-size: 1rem;
+      max-width: 28rem;
+      margin-bottom: 0.9rem;
+    }
+
+    & .input-box {
+      row-gap: 0.5rem;
+      margin-bottom: 2.2rem;
+
+      & .password {
+        display: flex;
+        max-width: 28rem;
+        width: 100%;
+        position: relative;
+        & svg {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+        }
+
+        & input {
+          width: 100%;
+        }
+      }
+
+      & label {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: "Manrope";
+      }
+
+      & input,
+      .dashboard__search-box input {
+        padding: 1.3rem 0.8rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        max-width: 28rem;
+        background-color: #f7f7f7;
+        &::placeholder {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          // line-height: 45px;
+          text-align: left;
+        }
+      }
+    }
+
+    & img {
+      width: 80px;
+      height: 43px;
+      margin-bottom: 2.5rem;
+      // background-color: $color-primary;
+    }
+
+    & h1 {
+      color: $color-black;
+      font-size: 1.37rem;
+      font-weight: 700;
+      font-family: "Manrope";
+      margin-bottom: 2rem;
+    }
+  }
+  &__image--box {
+    flex: 1;
+  }
+
+  &__image--box {
+    align-items: center;
+    width: 100%;
+    @include respond(tabport) {
+      display: none;
+    }
+
+    & img {
+      width: 262px;
+      height: 300px;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: center;
+      max-width: 28rem;
+    }
+  }
+
+  &__require {
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 13.66px;
+
+    & ul li:before {
+      content: "\2713";
+      margin-right: 0.5rem;
+      color: $color-check;
+    }
+
+    & ul li:first-of-type:before {
+      content: "\01F5D9";
+      margin-right: 0.5rem;
+      color: $color-canceled;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+// authentication modal view
+.modal {
+  &__content {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 189px;
+      height: 141px;
+      margin-bottom: 2rem;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 21.86px;
+      max-width: 23.5rem;
+      margin-bottom: 2.4rem;
+      color: $color-black-dark;
+      text-align: center;
+    }
+  }
+}
+
+.circle {
+  position: relative;
+  background: $color-white;
+  border-radius: 50%;
+  width: 83px;
+  height: 83px;
+  border: 2px solid $color-check;
+  margin-bottom: 2rem;
+}
+
+.checkmark {
+  position: absolute;
+  transform: rotate(45deg) translate(-50%, -50%);
+  left: 35%;
+  top: 45%;
+  height: 27px;
+  width: 13px;
+  border-bottom: 3px solid $color-check;
+  border-right: 3px solid $color-check;
+}
+
+.text-area,
+.select-service {
+  padding: 1rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  max-width: 28rem;
+  background-color: #f7f7f7;
+  &::placeholder {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 45px;
+    text-align: left;
+  }
+}
+
+.calender-date {
+  padding: 1.3rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  height: 10rem;
+  margin-bottom: 1.5rem;
+  background-color: #f7f7f7;
+  &::placeholder {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 45px;
+    text-align: left;
+  }
+}
+
+.select-service option {
+  border: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}

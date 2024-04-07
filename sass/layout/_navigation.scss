@@ -1,0 +1,116 @@
+.sidebar {
+  flex: 0 0 15%;
+  background-color: $color-primary;
+  transition: all 0.3s ease-in-out;
+
+  @include respond(mobileL) {
+    flex: 0 0 5%;
+  }
+
+  &__menu {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 2rem;
+    margin-top: 3.7rem;
+    margin-left: 10%;
+    transition: all 0.3s ease-in-out;
+
+    // Older browsers
+    background-image: url(/assets/icons/menu.svg);
+    background-size: cover;
+
+    //Newer browsers - masks
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: #fff;
+      -webkit-mask-image: url(/assets/icons/menu.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(/assets/icons/menu.svg);
+      mask-size: cover;
+      background-image: none;
+    }
+
+    @include respond(mobileL) {
+      display: none;
+    }
+  }
+}
+
+.side-nav {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+
+  & span {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__item {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 1.5rem;
+    height: 5rem;
+    border-radius: 30px 0px 0px 30px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__item::before {
+    margin-left: 3.7rem;
+
+    // &:hover {
+    //   background-color: $color-primary;
+    // }
+  }
+
+  &__item:hover {
+    background-color: #333;
+  }
+
+  &__item--staff {
+    background-color: #fff;
+    // margin-left: 3.7rem;
+  }
+
+  &__item--staff::before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 2rem;
+    margin-right: 0.7rem;
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: $color-primary;
+      -webkit-mask-image: url(/assets/icons/staff.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-image: url(/assets/icons/staff.svg);
+      mask-size: contain;
+      background-image: none;
+    }
+  }
+
+  &__item--staff:hover:before {
+    background-color: $color-primary;
+  }
+
+  &__item--logout::before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 2rem;
+    margin-right: 0.7rem;
+
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: #fff;
+      -webkit-mask-image: url(/assets/icons/logout.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-image: url(/assets/icons/logout.svg);
+      mask-size: contain;
+      background-image: none;
+    }
+  }
+}

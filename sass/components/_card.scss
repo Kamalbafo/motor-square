@@ -1,0 +1,37 @@
+.card {
+  &__container {
+    max-width: 37rem;
+    width: 100%;
+    column-gap: 0.7rem;
+    row-gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+  }
+  &__box {
+    border: 1px solid $color-gray;
+    padding: 0.68rem;
+    border-radius: 10px;
+    max-width: 17rem;
+    width: 100%;
+
+    &--title {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 18px;
+      color: $color-black;
+      text-transform: uppercase;
+      //   margin-bottom: 0.68rem;
+    }
+
+    &--description {
+      font-weight: 700;
+      color: $color-black;
+      font-size: 1.3rem;
+      line-height: 32px;
+    }
+  }
+}
+
+.special-card {
+  max-width: 75rem !important;
+}
